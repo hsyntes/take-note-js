@@ -1,0 +1,164 @@
+$color-dark: #161616;
+$color-darker: #0f0e0e;
+$color-primary: #e63e6d;
+$color-light: #fff;
+$color-muted: rgba(255, 255, 255, 0.2);
+
+@mixin setColor($color) {
+  color: $color !important;
+}
+
+@mixin setBg($color) {
+  background: $color !important;
+}
+
+@mixin setFontSize($size) {
+  font-size: $size !important;
+}
+
+@mixin setFontWeight($weight) {
+  font-weight: $weight !important;
+}
+
+@mixin setShadow($size) {
+  box-shadow: 0 0 $size $color-darker !important;
+}
+
+@mixin setBtn($color) {
+  &:hover {
+    background: darken($color: $color, $amount: 5) !important;
+  }
+  &:active {
+    background: darken($color: $color, $amount: 10) !important;
+  }
+}
+
+.shadow {
+  @include setShadow(10px);
+}
+
+a,
+.btn,
+p {
+  @include setFontSize(14px);
+}
+
+a,
+.btn {
+  @include setFontWeight(500);
+}
+
+.btn {
+  border: none !important;
+  color: $color-muted !important;
+  &:hover {
+    color: $color-light !important;
+  }
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
+.btn-primary {
+  @include setBg($color-primary);
+  @include setColor($color-light);
+  @include setBtn($color-primary);
+}
+
+.text-light {
+  @include setColor($color-light);
+}
+
+.text-muted {
+  @include setColor($color-muted);
+}
+
+.bg-dark {
+  @include setBg($color-dark);
+}
+
+.dropdown-menu-dark {
+  @include setBg($color-dark);
+  .dropdown-item {
+    &:active {
+      @include setBg($color-primary);
+    }
+  }
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $color-dark;
+  color: $color-light;
+  overflow: hidden;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  @include setFontSize(24px);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border {
+  border: 1px solid $color-muted !important;
+}
+
+textarea,
+input {
+  @include setFontSize(14px);
+  background: none !important;
+  color: darken($color: $color-light, $amount: 30) !important;
+  resize: none !important;
+  &::placeholder {
+    color: $color-muted !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+    border: 1px solid $color-light !important;
+    color: $color-light !important;
+  }
+}
+
+main {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 360px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 360px;
+  }
+  .card {
+    transition: 0.2s all ease-out;
+    overflow: hidden;
+    &:hover {
+      @include setShadow(2px);
+    }
+  }
+}
+
+.modal {
+  animation: opening-animation 0.2s ease-out !important;
+}
+
+@keyframes opening-animation {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

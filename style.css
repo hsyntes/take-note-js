@@ -1,0 +1,182 @@
+.shadow {
+  -webkit-box-shadow: 0 0 10px #0f0e0e !important;
+          box-shadow: 0 0 10px #0f0e0e !important;
+}
+
+a,
+.btn,
+p {
+  font-size: 14px !important;
+}
+
+a,
+.btn {
+  font-weight: 500 !important;
+}
+
+.btn {
+  border: none !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn:hover {
+  color: #fff !important;
+}
+
+.btn:active {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.btn-primary {
+  background: #e63e6d !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background: #e3275c !important;
+}
+
+.btn-primary:active {
+  background: #d51c50 !important;
+}
+
+.text-light {
+  color: #fff !important;
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.bg-dark {
+  background: #161616 !important;
+}
+
+.dropdown-menu-dark {
+  background: #161616 !important;
+}
+
+.dropdown-menu-dark .dropdown-item:active {
+  background: #e63e6d !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #161616;
+  color: #fff;
+  overflow: hidden;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 24px !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+textarea,
+input {
+  font-size: 14px !important;
+  background: none !important;
+  color: #b3b3b3 !important;
+  resize: none !important;
+}
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+textarea::-ms-input-placeholder,
+input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+textarea:focus,
+input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+  width: 2px;
+}
+
+main::-webkit-scrollbar-track {
+  border-radius: 360px;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #e63e6d;
+  border-radius: 360px;
+}
+
+main .card {
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  overflow: hidden;
+}
+
+main .card:hover {
+  -webkit-box-shadow: 0 0 2px #0f0e0e !important;
+          box-shadow: 0 0 2px #0f0e0e !important;
+}
+
+.modal {
+  -webkit-animation: opening-animation 0.2s ease-out !important;
+          animation: opening-animation 0.2s ease-out !important;
+}
+
+@-webkit-keyframes opening-animation {
+  from {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes opening-animation {
+  from {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

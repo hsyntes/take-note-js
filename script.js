@@ -111,7 +111,9 @@ document.addEventListener("click", function (e) {
 });
 
 btnEditNote.addEventListener("click", function () {
-  if (checkInputs([inputEditTitle, inputEditNote])) {
+  if (checkInputs([inputEditTitle, inputEditNote]))
+    alert("The title and note cannot be empty!");
+  else {
     if (
       inputEditTitle.value === cardTitle.textContent &&
       inputEditNote.value === cardText.textContent
@@ -124,7 +126,7 @@ btnEditNote.addEventListener("click", function () {
       ];
       btnCloseEditNote.click();
     }
-  } else alert("The title and the note cannot be empty!");
+  }
 });
 
 inputEditNote.addEventListener("keydown", function (e) {
